@@ -122,18 +122,21 @@ function DocsCategory({ url }: { url: string }) {
     <Cards>
       {findSiblings(source.getPageTree(), url).map((item) => {
         if (item.type === 'separator') {
-          return
+          return null
         }
-        if (item.type === 'folder') {
-          if (!item.index) {
-            return
-          }
-          item = item.index
+
+        const resolvedItem = item.type === 'folder' ? item.index : item
+        if (!resolvedItem) {
+          return null
         }
 
         return (
-          <Card href={item.url} key={item.url} title={item.name}>
-            {item.description}
+          <Card
+            href={resolvedItem.url}
+            key={resolvedItem.url}
+            title={resolvedItem.name}
+          >
+            {resolvedItem.description}
           </Card>
         )
       })}
