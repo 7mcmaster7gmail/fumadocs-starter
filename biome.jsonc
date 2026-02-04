@@ -46,7 +46,9 @@
           "fix": "safe",
           "level": "info",
           "options": {
-            "functions": ["cn"]
+            "functions": [
+              "cn"
+            ]
           }
         },
         "noLeakedRender": "off"
@@ -66,5 +68,9 @@
       "allowComments": true
     }
   },
-  "extends": ["ultracite/core", "ultracite/react", "ultracite/next"]
+  "extends": [
+    "ultracite/biome/core",
+    "ultracite/biome/react",
+    "ultracite/biome/next"
+  ]
 }
