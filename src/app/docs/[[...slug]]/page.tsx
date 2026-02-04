@@ -43,6 +43,9 @@ export default async function Page(
         style: 'clerk',
       }}
       toc={toc}
+      footer={{
+        className: 'xl:pb-6'
+      }}
     >
       <div className='relative flex @sm:flex-row flex-col items-start @sm:items-center gap-2'>
         <h1 className='break-all font-semibold text-[1.75em]'>
