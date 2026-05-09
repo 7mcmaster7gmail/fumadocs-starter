@@ -4,19 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "bun run build:pre && next build && bun run build:post",
-    "build:pre": "bun ./scripts/pre-build.ts",
-    "build:post": "bun ./scripts/post-build.ts",
     "dev": "next dev",
+    "build": "fumadocs-mdx && next build",
     "start": "next start",
     "postinstall": "fumadocs-mdx",
-    "check": "ultracite check",
-    "check:spelling": "cspell -c .cspell.jsonc --no-progress --no-summary --no-must-find-files --unique --cache",
-    "check:unsafe": "ultracite fix --unsafe .",
-    "check:write": "ultracite fix .",
     "typegen": "fumadocs-mdx && next typegen",
-    "typecheck": "bun run typegen && tsc --noEmit",
-    "with-env": "dotenv -e ../../.env --",
+    "typecheck": "fumadocs-mdx && tsc --noEmit",
+    "check": "biome check .",
     "prepare": "lefthook install"
   },
   "dependencies": {
