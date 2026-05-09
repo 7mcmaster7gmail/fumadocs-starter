@@ -11,9 +11,9 @@ export default function NotFound() {
           This page could not be found.{' '}
           <Link
             className='text-primary underline underline-offset-4 hover:text-primary/80'
-            href='/'
+            href='/docs'
           >
-            Go back home
+            Go to docs
           </Link>
         </h2>
       </div>
