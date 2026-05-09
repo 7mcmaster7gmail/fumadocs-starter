@@ -3,11 +3,6 @@ import { baseOptions, linkItems, logo } from '@/lib/layout.shared'
 import { source } from '@/lib/source'
 import 'katex/dist/katex.min.css'
 import type { CSSProperties } from 'react'
-import {
-  AISearch,
-  AISearchPanel,
-  AISearchTrigger,
-} from '@/components/fumadocs/ai/search'
 
 const LEADING_DASHES = /^-+/
 const TRAILING_DASHES = /-+$/
@@ -65,10 +60,6 @@ export default function Layout({ children }: LayoutProps<'/docs'>) {
     >
       {children}
 
-      <AISearch>
-        <AISearchPanel />
-        <AISearchTrigger />
-      </AISearch>
     </DocsLayout>
   )
 }
